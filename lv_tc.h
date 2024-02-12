@@ -16,7 +16,7 @@ extern "C" {
  *      TYPEDEFS
  **********************/
 
-typedef float lv_tc_val_t;
+typedef int16_t lv_tc_val_t;
 
 typedef struct {
     bool isValid;

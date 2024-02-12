@@ -31,7 +31,7 @@ typedef struct {
     bool inputEnabled;              /* A flag which determines whether the screen accepts input from the touch driver.
                                        Makes sure pressing the crosshair is only handled once until releasing */
     lv_point_t scrPoints[3];        /* The points to be pressed (in the coordinate space of the screen) */
-    lv_point_t tchPoints[3];        /* The touched points during the current calibration (in the coordinate space of the touch driver) */
+    lv_point_t tchPoints[3][3];     /* The touched points during the current calibration (in the coordinate space of the touch driver) */
     uint8_t currentStep;            /* The current calibration step */
     lv_timer_t *startDelayTimer;    /* The timer for delaying user input after opening the screen */
     lv_timer_t *recalibrateTimer;   /* The timer for automatic recalibration */
